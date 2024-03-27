@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Hello World",
+    "version": "1.0.0",
+    "description": "Basic ReactJS hello world",
+    "options_page": "options.html",
+    "icons":{
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "action": {
+        "default_title": "Click Me",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.google.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ]
+  }
